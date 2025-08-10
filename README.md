@@ -6,6 +6,10 @@ I am thinking of using a small reasoning model which emits the thinking tokens a
 
 We will have to do token forcing to get the final answer doing something like "Final Answer: " and only filling the later part with digits and similarly for the modle estimated confidence using "Confidence: ", the system prompt will also have to be updated appropriately
 
+Roadmap:
+Step 1.
+Benchmark deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B on 500 subset of GSM8K dataset, the subset should be fixed so that every other experiment will be on that subset so that we will get clear accuracy and confidence measures, will use hard token constraints for Final answer and confidence. This should do both baseline A (thinking) and baseline B (no thinking). Compute accuracy and confidence and save everything to the json so that further analysis can be done on it later
+
 Some related papers:
 Reasoning models can be effective without thinking
 Reasoning models don't always say what they think
